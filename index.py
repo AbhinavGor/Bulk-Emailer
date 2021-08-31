@@ -2,7 +2,11 @@ from tkinter import *
 import os
 
 def run():
-    os.system("python3 mail_bot.py")
+    sender_email = str(sender_email_entry.get())
+    sender_email_password  = str(sender_email_password_entry.get())
+    emails_path_str = str(emails_path_entry.get())
+    
+    os.system(f'python3 mail_bot.py {sender_email} {sender_email_password} {emails_path_str}')
     
 root = Tk()
 root.geometry('1000x500')
